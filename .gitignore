@@ -1,0 +1,7 @@
+*.html
+*.htm
+*.iml
+/.idea/
+/.git/
+/out/
+/target/
