@@ -1,0 +1,13 @@
+Button{
+    -fx-background-color: rgba(10,10,10,50);
+    -fx-margin: 20px,20px,20px,20px;
+}
+
+.root{
+    -fx-base: rgba(60,63,65,255);
+}
+.welcome-text{
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-background-color: teal;
+}
