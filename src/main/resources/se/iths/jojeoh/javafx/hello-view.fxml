@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<?import java.net.URL?>
-<SplitPane styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2"
+<?import javafx.scene.canvas.Canvas?>
+<SplitPane dividerPositions="0.5" prefHeight="800" prefWidth="600" styleClass="root"
+           xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="se.iths.jojeoh.javafx.HelloController">
+    <fx:define>
+        <ToggleGroup fx:id="radio"/>
+    </fx:define>
     <AnchorPane>
         <VBox>
             <children>
                 <Label fx:id="welcomeText2" styleClass="welcome-text"/>
-                <Button onAction="#onHelloButtonClick2" text="Hello!" rotate="45"/>
+                <Button onAction="#onHelloButtonClick2" text="Hello!"/>
+                <RadioButton mnemonicParsing="false" text="RadioButton"/>
+                <RadioButton mnemonicParsing="false" text="RadioButton"></RadioButton>
+                <TextArea prefHeight="200.0" prefWidth="200.0"/>
             </children>
         </VBox>
     </AnchorPane>
-    <AnchorPane prefWidth="20">
+    <AnchorPane onMouseMoved="#giveMouseCoordinates" prefWidth="20">
         <children>
-            <VBox>
-                <Label fx:id="welcomeText"/>
-                <Button onAction="#onHelloButtonClick" text="Hello!"/>
-                <Button text="Test!"/>
+            <VBox fillWidth="true">
+                <Label fx:id="welcomeText" styleClass="welcome-text"/>
+                <Button mnemonicParsing="true" onAction="#onHelloButtonClick" text="_Hello!"/>
+                <CheckBox fx:id="checkBox1" mnemonicParsing="false" onAction="#onCheckBoxChecked" text="CheckBox"/>
+                <CheckBox mnemonicParsing="false" onAction="#onCheckBoxChecked" text="CheckBox2"/>
+                <TextField fx:id="textField1" onKeyTyped="#writeToLabel" promptText="Skriv något!" text="${controller}"/>
+                <ComboBox prefWidth="150.0"/>
+                <AnchorPane styleClass="canvas-wrapper">
+                    <Canvas fx:id="canvas" height="200" width="200" onMouseClicked="#canvasClicked" />
+                </AnchorPane>
             </VBox>
-
         </children>
     </AnchorPane>
     <stylesheets>

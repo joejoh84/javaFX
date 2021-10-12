@@ -1,6 +1,6 @@
 Button{
     -fx-background-color: rgba(10,10,10,50);
-    -fx-margin: 20px,20px,20px,20px;
+    -fx-margin: 20px 20px 20px 20px;
 }
 
 .root{
@@ -9,5 +9,17 @@ Button{
 .welcome-text{
     -fx-padding: 10px;
     -fx-font-size: 20px;
-    -fx-background-color: teal;
+    -fx-background-color: gray;
+}
+
+#canvas{
+    -fx-border-width: 1.0;
+    -fx-border-color: BLACK;
+}
+.canvas-wrapper{
+    -fx-border-width: 1.0;
+    -fx-border-color: CYAN;
+    -fx-border-radius: 5;
+    -fx-padding: 2;
+
 }
